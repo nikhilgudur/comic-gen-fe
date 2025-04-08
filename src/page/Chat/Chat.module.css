@@ -1,0 +1,14 @@
+.chat__container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100vw;
+  /* border-radius: 10px; */
+  /* overflow: hidden; */
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+.chat__input {
+  padding: 10px;
+}
