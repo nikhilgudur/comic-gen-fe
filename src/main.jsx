@@ -6,12 +6,8 @@ import router from "./routes/routes";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-<<<<<<< HEAD
     <div style={{ marginLeft: "20px", marginRight: "20px", width: "100vw" }}>
       <RouterProvider router={router} />
     </div>
-=======
-    <RouterProvider router={router} />
->>>>>>> refs/remotes/origin/main
   </StrictMode>
 );

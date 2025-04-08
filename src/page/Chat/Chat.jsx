@@ -1,11 +1,23 @@
 import { useState, useEffect } from "react";
+import axios from 'axios';
 import styles from "./Chat.module.css";
+
+const MODELS = [
+  {name: 'SD XL'},
+  {name: 'FLUX'},
+  {name: 'lumina'},
+  {name: 'PixArt-Sigma'},
+]
 
 const Chat = () => {
   const [chat, setChat] = useState([]);
   const [prompt, setPrompt] = useState("");
+  const [images, setImages] = useState([]);
 
-  useEffect(() => {}, [chat]);
+
+  useEffect(() => {
+    // axios.get()
+  }, [chat]);
 
   const sendPrompt = (e) => {
     if (e.key === "Enter" || e.type === "click") {
@@ -13,6 +25,8 @@ const Chat = () => {
       setPrompt("");
     }
   };
+
+  const modelOptions = MODELS.map(model => <option>{model.name}</option>)
 
   console.log(...chat);
   return (
@@ -34,6 +48,12 @@ const Chat = () => {
             <p>{c.response}</p>
           </div>
         ))}
+        <div style={{display: 'flex'}}>
+        <div style={{padding: 10}}>
+        <select>
+          {modelOptions}
+        </select>
+        </div>
         <input
           onKeyDown={sendPrompt}
           type="text"
@@ -41,8 +61,9 @@ const Chat = () => {
           value={prompt}
           onChange={(e) => setPrompt(e.target.value)}
           className={styles.chat__input}
-        />
+          />
         <button onClick={sendPrompt}>Send</button>
+          </div>
       </div>
     </>
   );

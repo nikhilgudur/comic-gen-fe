@@ -1,24 +1,14 @@
-<<<<<<< HEAD
-.chat__container {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  width: 100vw;
-  /* border-radius: 10px; */
-  /* overflow: hidden; */
-  margin-left: 40px;
-  margin-right: 40px;
-}
-
-.chat__input {
-  padding: 10px;
-}
-=======
 /* ComicGenerator.css */
 .comic__generator {
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
+}
+
+.chat__input {
+width: 80%;
+margin-right: 10px;
+padding: 10px;
 }
 
 .controls {
@@ -102,4 +92,3 @@
   font-size: 14px;
   color: #666;
 }
->>>>>>> refs/remotes/origin/main

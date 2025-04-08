@@ -1,0 +1,9 @@
+.input__section {
+    display: flex;
+    justify-content: center;
+}
+
+.chat__container {
+    height: 80%;
+    overflow-y: scroll;
+}
